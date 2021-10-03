@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 
 <head>
-    <title>WebRTC Video Conference Tutorial - Plain WebRTC</title>
+    <title>Auction Live stream</title>
 </head>
 
 <body>
 
-    <h1>WebRTC Video Conference Tutorial - Plain WebRTC</h1>
     <div id="selectRoom">
         <label for="name">Type your Name</label>
         <input id="name" type="text" />
@@ -15,9 +14,18 @@
         <button id="joinBroadcaster">Join as Broadcaster</button>
         <button id="joinViewer">Join as Viewer</button>
     </div>
+    <h1 style="text-align: center;">Live Auction Portal</h1>
+    <h4 style="text-align: center; color:red">You are live now</h4>
+
+
+
+    <div class="row" style="display: flex;justify-content: center;margin-top:50px">
+
+        <video autoplay muted></video>
+
+    </div>
 
     <div id="consultingRoom" style="display:none">
-        <video autoplay muted></video>
         <p id="broadcasterName"></p>
         <ul id="viewers"></ul>
     </div>

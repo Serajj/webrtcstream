@@ -3,9 +3,12 @@
 <head>
     <title>WebRTC Video Conference Tutorial - Plain WebRTC</title>
     <style>
-        video {
-            height: 100%;
-            width: auto;
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
 }
     </style>
 </head>
@@ -23,7 +26,7 @@
     </div>
 
     <div id="consultingRoom" style="display:none">
-        <video autoplay muted></video>
+        <video id="myVideo" autoplay muted controls poster="https://p.calameoassets.com/170411162510-271e8c55bcc8a93017fa7ac57607b0e2/p1.jpg" aria-placeholder="https://p.calameoassets.com/170411162510-271e8c55bcc8a93017fa7ac57607b0e2/p1.jpg"></video>
         <p style="display: none;" id="broadcasterName"></p>
         <ul style="display: none;" id="viewers"></ul>
     </div>

@@ -1,7 +1,11 @@
 //requires
 const express = require("express");
 const app = express();
-const http = require("http").Server(app);
+const fs = require('fs');
+const http = require("http").Server({
+  key:fs.readFileSync('/etc/letsencrypt/live/testappdemo.xyz/privkey.pem','utf8'),
+  cert:fs.readFileSync('/etc/letsencrypt/live/testappdemo.xyz/fullchain.pem','utf8')
+},app);
 const io = require("socket.io")(http);
 
 const port = process.env.PORT || 3000;

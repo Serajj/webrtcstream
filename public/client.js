@@ -9,8 +9,9 @@ const videoElement = document.querySelector("video");
 const broadcasterName = document.getElementById("broadcasterName");
 const viewers = document.getElementById("viewers");
 
-var bname = location.search.split('name=')[1];
 var myid = location.search.split('id=')[1];
+
+var bname = "auction"+ myid;
 document.getElementById("name").value=bname;
 document.getElementById("roomNumber").value=myid;
 
