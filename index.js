@@ -2,7 +2,10 @@
 const express = require("express");
 const app = express();
 const fs = require('fs');
-const http = require("http").Server(app);
+const http = require("http").Server({
+  key:fs.readFileSync('/www/server/panel/vhost/cert/ssrddevelopment.com/privkey.pem','utf8'),
+  cert:fs.readFileSync('/www/server/panel/vhost/cert/ssrddevelopment.com/fullchain.pem','utf8')
+},app);
 const io = require("socket.io")(http);
 
 const port = process.env.PORT || 3000;
