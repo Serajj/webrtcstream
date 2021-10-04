@@ -28,7 +28,7 @@ const iceServers = {
     { urls: "stun:stun.l.google.com:19302" },
   ],
 };
-const streamConstraints = { audio: false, video: { height: 480 } };
+const streamConstraints = { audio: true, video: { height: 480 } };
 
 // Let's do this 💪
 var socket = io();
